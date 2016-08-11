@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A4AB07A1D5CEFC400C0946F /* PocketClosetimg */ = {isa = PBXFileReference; lastKnownFileType = file; path = PocketClosetimg; sourceTree = "<group>"; };
 		CFF1615D1D5B8C7D00C5744A /* PocketCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF161601D5B8C7D00C5744A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF161631D5B8C7D00C5744A /* PocketCloset.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocketCloset.xcdatamodel; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 				CFF1616E1D5B8C7D00C5744A /* LaunchScreen.storyboard */,
 				CFF161711D5B8C7D00C5744A /* Info.plist */,
 				CFF161621D5B8C7D00C5744A /* PocketCloset.xcdatamodeld */,
+				0A4AB07A1D5CEFC400C0946F /* PocketClosetimg */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -294,6 +296,7 @@
 				CFF161761D5B8C7D00C5744A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
