@@ -9,7 +9,8 @@
 import UIKit
 
 class MainMenuViewController: UIViewController {
-    let outfitSegue = "newOutfitSegue"
+    let myClosetSegueIdentifier = "showMyCloset"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,23 +21,14 @@ class MainMenuViewController: UIViewController {
     // will need to create 4 different segues to toggle through views
     // also a navigation controller will need to be embedded in so that we can go back to this menu
  //
+    
+    
 
-    @IBAction func NewOutfitPressed(sender: AnyObject) {
-        //TODO: performsegue for that respective segue
-        print("performsegue for that respective segue")
-        //performSegueWithIdentifier(outfitSegue, sender:self )// by doing this it loads twice. Segue does the moving to the next screen job but the perform segue has to be worked on for the data, we might need to us if statements for passing different data
-    }
-    
-    @IBAction func myHistoryPressed(sender: AnyObject) {
-        print("performsegue for that respective segue")
-    }
-    
     @IBAction func myClosetPressed(sender: AnyObject) {
-        print("performsegue for that respective segue")
+        performSegueWithIdentifier(myClosetSegueIdentifier, sender: self)
     }
-    @IBAction func myCameraPressed(sender: AnyObject) {
-        print("performsegue for that respective segue")
-    }
+    
+    
     /*
      @IBOutlet weak var MyHistoryPressed: UIButton!
     // MARK: - Navigation

@@ -9,6 +9,8 @@
 import UIKit
 
 class myClosetViewController: UIViewController {
+    
+    let returnToMainMenuSegueIdentifier = "returnToMainMenu"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,9 +18,10 @@ class myClosetViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func pressedTops(sender: AnyObject) {
-        print("Needs to be implemented")
+    @IBAction func pressedMainMenu(sender: AnyObject) {
+        performSegueWithIdentifier(returnToMainMenuSegueIdentifier, sender: self)
     }
+   
     
     // I did not connect the rest of the buttons because of some reason the print statement is not shown for the second screen when any button is pressed. Idk the problem seems minor.. try remaking the buttons for my closet if you can't find something at first.
     
