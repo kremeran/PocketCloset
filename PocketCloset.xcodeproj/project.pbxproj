@@ -23,6 +23,7 @@
 		CFC100441D5E8E4200DC7A12 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC1003C1D5E8E4200DC7A12 /* UserIcon.png */; };
 		CFC100451D5E8E4200DC7A12 /* SettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC1003D1D5E8E4200DC7A12 /* SettingsIcon.png */; };
 		CFC100461D5E8E4200DC7A12 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CFC1003E1D5E8E4200DC7A12 /* MenuButton.png */; };
+		CFF301571D5FB4AF00D2E75C /* images in Resources */ = {isa = PBXBuildFile; fileRef = CFF301561D5FB4AF00D2E75C /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CFC1003D1D5E8E4200DC7A12 /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsIcon.png; sourceTree = "<group>"; };
 		CFC1003E1D5E8E4200DC7A12 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.png; sourceTree = "<group>"; };
 		CFF1615D1D5B8C7D00C5744A /* PocketCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF301561D5FB4AF00D2E75C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCloset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		CFC1003F1D5E8E4200DC7A12 /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				CFF301561D5FB4AF00D2E75C /* images */,
 				CFC100381D5E8E4200DC7A12 /* TitleBanner.png */,
 				CFC100391D5E8E4200DC7A12 /* ClosetButton.png */,
 				CFC1003A1D5E8E4200DC7A12 /* MenuBanner.png */,
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF301571D5FB4AF00D2E75C /* images in Resources */,
 				CFC100341D5E8E1200DC7A12 /* Info.plist in Resources */,
 				CFC100461D5E8E4200DC7A12 /* MenuButton.png in Resources */,
 				0A6DC4891D5F38C100C36784 /* GoogleService-Info.plist in Resources */,
