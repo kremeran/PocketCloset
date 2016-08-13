@@ -16,6 +16,7 @@
 		CF70C6C31D5FD79200D89CF6 /* SettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BC1D5FD79200D89CF6 /* SettingsIcon.png */; };
 		CF70C6C41D5FD79200D89CF6 /* TitleBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BD1D5FD79200D89CF6 /* TitleBanner.png */; };
 		CF70C6C51D5FD79200D89CF6 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */; };
+		CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */; };
 		CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */; };
 		CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC100291D5E8E1200DC7A12 /* Main.storyboard */; };
 		CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		CF70C6BC1D5FD79200D89CF6 /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsIcon.png; path = "PocketCloset/untitled folder/SettingsIcon.png"; sourceTree = SOURCE_ROOT; };
 		CF70C6BD1D5FD79200D89CF6 /* TitleBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TitleBanner.png; path = "PocketCloset/untitled folder/TitleBanner.png"; sourceTree = SOURCE_ROOT; };
 		CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UserIcon.png; path = "PocketCloset/untitled folder/UserIcon.png"; sourceTree = SOURCE_ROOT; };
+		CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingViewController.swift; sourceTree = "<group>"; };
 		CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC100291D5E8E1200DC7A12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */,
 				CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */,
 				0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */,
+				CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */,
 				CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */,
+				CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */,
 				CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

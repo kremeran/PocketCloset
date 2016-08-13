@@ -350,6 +350,10 @@
                                 <state key="normal" title="Bottoms" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedBottoms:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="WPU-Zv-OlR"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showBottomsSegueIdentifier" modalTransitionStyle="crossDissolve" id="Zn6-GQ-RGC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIK-E2-yxv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -357,6 +361,10 @@
                                 <state key="normal" title="Tops" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedTops:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="nXX-y6-e7N"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showTopsSegueIdentifier" modalTransitionStyle="crossDissolve" id="ozg-X2-9wB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5X-Xc-mQ0">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -364,6 +372,10 @@
                                 <state key="normal" title="Formal" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedFormal:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="PfX-oM-9Ai"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showFormalSegueIdentifier" modalTransitionStyle="crossDissolve" id="w6f-nO-jT6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyd-vY-X53">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -371,6 +383,10 @@
                                 <state key="normal" title="Swimwear" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedSwimwear:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="HMR-lN-aKz"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showSwimwearSegueIdentifier" modalTransitionStyle="crossDissolve" id="duo-GT-rBm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXa-aK-xke">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -378,6 +394,10 @@
                                 <state key="normal" title="Footwear" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedFootwear:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="zB7-r0-qc9"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showFootwearSegueIdentifier" modalTransitionStyle="crossDissolve" id="GR8-vv-Awl"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-Lt-wlO">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -404,7 +424,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="501-zb-BMh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="204" id="8l2-qR-KHv"/>
+                                    <constraint firstAttribute="width" constant="200" id="8l2-qR-KHv"/>
                                     <constraint firstAttribute="height" constant="36" id="TrL-EJ-ZIr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -433,6 +453,10 @@
                                 <state key="normal" title="Accessories" backgroundImage="ClosetButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedAccessories:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="tUN-np-BHJ"/>
+                                    <segue destination="iE0-sc-kC6" kind="presentation" identifier="showAcessoriesSegueIdentifier" modalTransitionStyle="crossDissolve" id="3KO-lk-5iE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0307371912" green="0.61615916999999998" blue="0.75743189099999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -579,6 +603,180 @@
             </objects>
             <point key="canvasLocation" x="885" y="-154.5"/>
         </scene>
+        <!--Clothing View Controller-->
+        <scene sceneID="NEQ-v3-Zdf">
+            <objects>
+                <viewController id="iE0-sc-kC6" customClass="ClothingViewController" customModule="PocketCloset" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xLM-BY-opI"/>
+                        <viewControllerLayoutGuide type="bottom" id="TXV-50-vW1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kS1-NO-Afm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleBanner.png" translatesAutoresizingMaskIntoConstraints="NO" id="TPe-RL-KVN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JTQ-Ad-ytY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JTQ-Ad-ytY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JTQ-Ad-ytY"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tops" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex1-Ir-lzL">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Lse-4q-sEJ"/>
+                                    <constraint firstAttribute="width" constant="250" id="eoi-tT-VrY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lse-4q-sEJ"/>
+                                        <exclude reference="eoi-tT-VrY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Lse-4q-sEJ"/>
+                                        <include reference="eoi-tT-VrY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kD9-lI-zL9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rd7-Bz-oEF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rd7-Bz-oEF" id="yuu-d5-LfA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7II-mm-Zvv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7II-mm-Zvv" id="6JZ-Vn-RU6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="irw-0t-tes">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="irw-0t-tes" id="0K7-MA-Hy6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-rR-Iey">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="bEQ-DJ-0IF"/>
+                                    <constraint firstAttribute="height" constant="36" id="rSC-n7-RFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Back" backgroundImage="TitleBanner.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bEQ-DJ-0IF"/>
+                                        <exclude reference="rSC-n7-RFg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bEQ-DJ-0IF"/>
+                                        <include reference="rSC-n7-RFg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pressedBackButton:" destination="iE0-sc-kC6" eventType="touchUpInside" id="KNm-Qu-odL"/>
+                                    <action selector="pressedMainMenu:" destination="4oI-cM-ISQ" eventType="touchUpInside" id="Eg8-s0-VMb"/>
+                                    <segue destination="4oI-cM-ISQ" kind="presentation" identifier="backToMyClosetSegueIdentifier" modalTransitionStyle="crossDissolve" id="aKl-mp-3v3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0307371912" green="0.61615916999999998" blue="0.75743189099999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kD9-lI-zL9" secondAttribute="trailing" constant="-5" id="0Og-zM-JHi"/>
+                            <constraint firstItem="Btx-rR-Iey" firstAttribute="centerX" secondItem="kS1-NO-Afm" secondAttribute="centerX" id="9g2-bG-Z8n"/>
+                            <constraint firstItem="kD9-lI-zL9" firstAttribute="top" secondItem="TPe-RL-KVN" secondAttribute="bottom" constant="17" id="CuM-Bq-Qhd"/>
+                            <constraint firstItem="kD9-lI-zL9" firstAttribute="leading" secondItem="kS1-NO-Afm" secondAttribute="leadingMargin" constant="-5" id="EPS-Dn-lK0"/>
+                            <constraint firstItem="TPe-RL-KVN" firstAttribute="centerX" secondItem="kS1-NO-Afm" secondAttribute="centerX" id="FxA-c7-RHG"/>
+                            <constraint firstItem="TPe-RL-KVN" firstAttribute="leading" secondItem="kS1-NO-Afm" secondAttribute="leadingMargin" constant="-5" id="Z1x-Dr-0u7"/>
+                            <constraint firstItem="TPe-RL-KVN" firstAttribute="top" secondItem="xLM-BY-opI" secondAttribute="bottom" constant="8" id="cCS-FY-lzc"/>
+                            <constraint firstItem="ex1-Ir-lzL" firstAttribute="centerY" secondItem="TPe-RL-KVN" secondAttribute="centerY" id="ech-lP-4go"/>
+                            <constraint firstItem="ex1-Ir-lzL" firstAttribute="centerX" secondItem="TPe-RL-KVN" secondAttribute="centerX" id="eo0-LS-cVt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TPe-RL-KVN" secondAttribute="trailing" constant="-5" id="y2J-Lx-4Wr"/>
+                            <constraint firstItem="Btx-rR-Iey" firstAttribute="top" secondItem="kD9-lI-zL9" secondAttribute="bottom" constant="17" id="yZd-Ig-bXs"/>
+                            <constraint firstItem="TXV-50-vW1" firstAttribute="top" secondItem="Btx-rR-Iey" secondAttribute="bottom" constant="8" id="zNz-Ld-oFU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="TPe-RL-KVN"/>
+                                <exclude reference="ex1-Ir-lzL"/>
+                                <exclude reference="kD9-lI-zL9"/>
+                                <exclude reference="Btx-rR-Iey"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="FxA-c7-RHG"/>
+                                <exclude reference="Z1x-Dr-0u7"/>
+                                <exclude reference="cCS-FY-lzc"/>
+                                <exclude reference="y2J-Lx-4Wr"/>
+                                <exclude reference="ech-lP-4go"/>
+                                <exclude reference="eo0-LS-cVt"/>
+                                <exclude reference="0Og-zM-JHi"/>
+                                <exclude reference="CuM-Bq-Qhd"/>
+                                <exclude reference="EPS-Dn-lK0"/>
+                                <exclude reference="9g2-bG-Z8n"/>
+                                <exclude reference="yZd-Ig-bXs"/>
+                                <exclude reference="zNz-Ld-oFU"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="TPe-RL-KVN"/>
+                                <include reference="ex1-Ir-lzL"/>
+                                <include reference="kD9-lI-zL9"/>
+                                <include reference="Btx-rR-Iey"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FxA-c7-RHG"/>
+                                <include reference="Z1x-Dr-0u7"/>
+                                <include reference="cCS-FY-lzc"/>
+                                <include reference="y2J-Lx-4Wr"/>
+                                <include reference="ech-lP-4go"/>
+                                <include reference="eo0-LS-cVt"/>
+                                <include reference="0Og-zM-JHi"/>
+                                <include reference="CuM-Bq-Qhd"/>
+                                <include reference="EPS-Dn-lK0"/>
+                                <include reference="9g2-bG-Z8n"/>
+                                <include reference="yZd-Ig-bXs"/>
+                                <include reference="zNz-Ld-oFU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clothingTableView" destination="kD9-lI-zL9" id="TDQ-Ro-gUZ"/>
+                        <outlet property="viewTitle" destination="ex1-Ir-lzL" id="sMH-b5-fCu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enl-vA-aNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693.5" y="-154.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CameraIcon.png" width="512" height="512"/>
@@ -589,4 +787,8 @@
         <image name="TitleBanner.png" width="766" height="254"/>
         <image name="UserIcon.png" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3KO-lk-5iE"/>
+        <segue reference="aKl-mp-3v3"/>
+    </inferredMetricsTieBreakers>
 </document>
