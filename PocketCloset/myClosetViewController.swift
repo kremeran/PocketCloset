@@ -23,8 +23,7 @@ class myClosetViewController: UIViewController {
     }
    
     
-    // I did not connect the rest of the buttons because of some reason the print statement is not shown for the second screen when any button is pressed. Idk the problem seems minor.. try remaking the buttons for my closet if you can't find something at first.
-    
+   
     
     
     /*

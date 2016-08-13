@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6DC4891D5F38C100C36784 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */; };
+		C5A329480917BBBC07A2B138 /* Pods_PocketCloset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */; };
 		CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */; };
 		CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC100291D5E8E1200DC7A12 /* Main.storyboard */; };
 		CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F9EFC174B2E5CC9BA6A777B /* Pods-PocketCloset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.debug.xcconfig"; sourceTree = "<group>"; };
+		66572DA4F2278BAE7C2FF436 /* Pods-PocketCloset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.release.xcconfig"; sourceTree = "<group>"; };
 		CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC100291D5E8E1200DC7A12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		CFC1003D1D5E8E4200DC7A12 /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsIcon.png; sourceTree = "<group>"; };
 		CFC1003E1D5E8E4200DC7A12 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.png; sourceTree = "<group>"; };
 		CFF1615D1D5B8C7D00C5744A /* PocketCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCloset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +52,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5A329480917BBBC07A2B138 /* Pods_PocketCloset.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47742B9588DB28A678500527 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F9EFC174B2E5CC9BA6A777B /* Pods-PocketCloset.debug.xcconfig */,
+				66572DA4F2278BAE7C2FF436 /* Pods-PocketCloset.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		646813FB33291385EDE05EA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFC1003F1D5E8E4200DC7A12 /* Image files */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +96,8 @@
 			children = (
 				CFF1615F1D5B8C7D00C5744A /* PocketCloset */,
 				CFF1615E1D5B8C7D00C5744A /* Products */,
+				47742B9588DB28A678500527 /* Pods */,
+				646813FB33291385EDE05EA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +120,7 @@
 				CFC1002C1D5E8E1200DC7A12 /* Info.plist */,
 				CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */,
 				CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */,
+				0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -105,9 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFF161741D5B8C7D00C5744A /* Build configuration list for PBXNativeTarget "PocketCloset" */;
 			buildPhases = (
+				D40E0CCACF6218777AAB4E60 /* [CP] Check Pods Manifest.lock */,
 				CFF161591D5B8C7D00C5744A /* Sources */,
 				CFF1615A1D5B8C7D00C5744A /* Frameworks */,
 				CFF1615B1D5B8C7D00C5744A /* Resources */,
+				1850060B6CFDD24B1956FEDB /* [CP] Embed Pods Frameworks */,
+				049F2BC4F81514D3489DEC71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,6 +188,7 @@
 			files = (
 				CFC100341D5E8E1200DC7A12 /* Info.plist in Resources */,
 				CFC100461D5E8E4200DC7A12 /* MenuButton.png in Resources */,
+				0A6DC4891D5F38C100C36784 /* GoogleService-Info.plist in Resources */,
 				CFC100331D5E8E1200DC7A12 /* LaunchScreen.storyboard in Resources */,
 				CFC100441D5E8E4200DC7A12 /* UserIcon.png in Resources */,
 				CFC100401D5E8E4200DC7A12 /* TitleBanner.png in Resources */,
@@ -171,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		049F2BC4F81514D3489DEC71 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1850060B6CFDD24B1956FEDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40E0CCACF6218777AAB4E60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CFF161591D5B8C7D00C5744A /* Sources */ = {
@@ -271,6 +350,7 @@
 		};
 		CFF161751D5B8C7D00C5744A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F9EFC174B2E5CC9BA6A777B /* Pods-PocketCloset.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -284,6 +364,7 @@
 		};
 		CFF161761D5B8C7D00C5744A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66572DA4F2278BAE7C2FF436 /* Pods-PocketCloset.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
