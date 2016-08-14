@@ -10,6 +10,8 @@ import UIKit
 
 class MainMenuViewController: UIViewController {
     let myClosetSegueIdentifier = "showMyCloset"
+    let settingsSegueIdentifier = "showSettingsSegue"
+    let myHistorySegueIdentifier = "myHistorySegueIdentifier"
     
 
     override func viewDidLoad() {
@@ -26,6 +28,12 @@ class MainMenuViewController: UIViewController {
 
     @IBAction func myClosetPressed(sender: AnyObject) {
         performSegueWithIdentifier(myClosetSegueIdentifier, sender: self)
+    }
+    @IBAction func settingsPressed(sender: AnyObject) {
+        performSegueWithIdentifier(settingsSegueIdentifier, sender: self)
+    }
+    @IBAction func pressedMyHistory(sender: AnyObject) {
+        performSegueWithIdentifier(myHistorySegueIdentifier, sender: self)
     }
     
     

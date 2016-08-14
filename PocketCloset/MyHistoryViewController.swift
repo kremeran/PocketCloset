@@ -1,5 +1,5 @@
 //
-//  ClothingViewController.swift
+//  MyHistoryViewController.swift
 //  PocketCloset
 //
 //  Created by Amy Kremer on 8/13/16.
@@ -8,31 +8,22 @@
 
 import UIKit
 
-class ClothingViewController: UIViewController {
-    let backIdentifier = "backToMyClosetSegueIdentifier"
+class MyHistoryViewController: UIViewController {
     
-    @IBOutlet weak var viewTitle: UILabel!
-    
-    @IBOutlet weak var clothingTableView: UITableView!
-    
-    var clothingTitle : String!
-    
+    let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        viewTitle.text = clothingTitle
-    }
-    
-    @IBAction func pressedBackButton(sender: AnyObject) {
-        performSegueWithIdentifier(backIdentifier, sender: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func pressedMainMenu(sender: AnyObject) {
+        performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
     }
     
 
