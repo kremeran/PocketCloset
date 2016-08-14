@@ -11,12 +11,9 @@ import UIKit
 class myClosetViewController: UIViewController {
     
     let returnToMainMenuSegueIdentifier = "returnToMainMenu"
-    let pressedTopsSegueIdentifier = "showTopsSegueIdentifier"
-    let pressedBottomsSegueIdentifier = "showBottomsSegueIdentifier"
-    let pressedFootwearSegueIdentifier = "showFootwearSegueIdentifier"
-    let pressedFormalSegueIdentifier = "showFormalSegueIdentifier"
-    let pressedAccessoriesSegueIdentifier = "showAcessoriesSegueIdentifier"
-    let pressedSwimwearSegueIdentifier = "showSwimwearSegueIdentifier"
+    let showCategoryIdentifier = "showCategoryIdentifier"
+    
+    var categoryTitle : String!
     
     
     override func viewDidLoad() {
@@ -26,48 +23,34 @@ class myClosetViewController: UIViewController {
     }
 
     @IBAction func pressedTops(sender: AnyObject) {
-        performSegueWithIdentifier(pressedTopsSegueIdentifier, sender: self)
+        categoryTitle = "Tops"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     @IBAction func pressedAccessories(sender: AnyObject) {
-        performSegueWithIdentifier(pressedAccessoriesSegueIdentifier, sender: self)
+        categoryTitle = "Accessories"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     @IBAction func pressedFootwear(sender: AnyObject) {
-        performSegueWithIdentifier(pressedFootwearSegueIdentifier, sender: self)
+        categoryTitle = "Footwear"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     @IBAction func pressedBottoms(sender: AnyObject) {
-        performSegueWithIdentifier(pressedBottomsSegueIdentifier, sender: self)
+        categoryTitle = "Bottoms"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     @IBAction func pressedFormal(sender: AnyObject) {
-        performSegueWithIdentifier(pressedFormalSegueIdentifier, sender: self)
+        categoryTitle = "Formal"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     @IBAction func pressedSwimwear(sender: AnyObject) {
-        performSegueWithIdentifier(pressedSwimwearSegueIdentifier, sender: self)
+        categoryTitle = "Swimwear"
+        performSegueWithIdentifier(showCategoryIdentifier, sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == pressedTopsSegueIdentifier {
+        if segue.identifier == showCategoryIdentifier {
             let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Tops"
-        }
-        if segue.identifier == pressedAccessoriesSegueIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Accessories"
-        }
-        if segue.identifier == pressedFootwearSegueIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Footwear"
-        }
-        if segue.identifier == pressedBottomsSegueIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Bottoms"
-        }
-        if segue.identifier == pressedFormalSegueIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Formal"
-        }
-        if segue.identifier == pressedSwimwearSegueIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
-            controller.clothingTitle = "Swimwear"
+            controller.clothingTitle = categoryTitle
         }
     }
     

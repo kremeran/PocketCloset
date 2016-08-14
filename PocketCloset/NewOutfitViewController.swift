@@ -1,16 +1,16 @@
 //
-//  MyHistoryViewController.swift
+//  NewOutfitViewController.swift
 //  PocketCloset
 //
-//  Created by Amy Kremer on 8/13/16.
+//  Created by Amy Kremer on 8/14/16.
 //  Copyright © 2016 Rose-Hulman. All rights reserved.
 //
 
 import UIKit
 
-class MyHistoryViewController: UIViewController {
+class NewOutfitViewController: UIViewController {
     
-    let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
+    let mainMenuSegueIdentifier = "pressedMainMenuIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +18,12 @@ class MyHistoryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func pressedMainMenu(sender: AnyObject) {
+        performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func pressedMainMenu(sender: AnyObject) {
-        performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
     }
     
 

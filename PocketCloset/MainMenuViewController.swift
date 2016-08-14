@@ -11,7 +11,10 @@ import UIKit
 class MainMenuViewController: UIViewController {
     let myClosetSegueIdentifier = "showMyCloset"
     let settingsSegueIdentifier = "showSettingsSegue"
-    let myHistorySegueIdentifier = "myHistorySegueIdentifier"
+    let myOutitsSegueIdentifier = "myOutfitsSegueIdentifier"
+    let cameraSegueIdentifier = "showCameraDetailSegue"
+    let socialSegueIdentifier = "socialSegueIdentifier"
+    let newOutfitSegueIdentifier = "pressedNewOutfitIdentifier"
     
 
     override func viewDidLoad() {
@@ -25,15 +28,24 @@ class MainMenuViewController: UIViewController {
  //
     
     
-
+    @IBAction func pressedNewOutfit(sender: AnyObject) {
+        performSegueWithIdentifier(newOutfitSegueIdentifier, sender: self)
+    }
+    @IBAction func pressedSocial(sender: AnyObject) {
+        performSegueWithIdentifier(socialSegueIdentifier, sender: self)
+    }
     @IBAction func myClosetPressed(sender: AnyObject) {
         performSegueWithIdentifier(myClosetSegueIdentifier, sender: self)
+    }
+    @IBAction func pressedMyOutfits(sender: AnyObject) {
+        performSegueWithIdentifier(myOutitsSegueIdentifier, sender: self)
     }
     @IBAction func settingsPressed(sender: AnyObject) {
         performSegueWithIdentifier(settingsSegueIdentifier, sender: self)
     }
-    @IBAction func pressedMyHistory(sender: AnyObject) {
-        performSegueWithIdentifier(myHistorySegueIdentifier, sender: self)
+    
+    @IBAction func pressedCamera(sender: AnyObject) {
+        performSegueWithIdentifier(cameraSegueIdentifier, sender: self)
     }
     
     

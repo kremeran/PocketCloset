@@ -10,6 +10,7 @@ import UIKit
 
 class ClothingViewController: UIViewController {
     let backIdentifier = "backToMyClosetSegueIdentifier"
+    let mainMenuIdentifier = "mainMenuSegueIdentifier"
     
     @IBOutlet weak var viewTitle: UILabel!
     
@@ -19,11 +20,12 @@ class ClothingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewTitle.text = clothingTitle
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
-        viewTitle.text = clothingTitle
+    @IBAction func pressedMainMenu(sender: AnyObject) {
+        performSegueWithIdentifier(mainMenuIdentifier, sender: self)
     }
     
     @IBAction func pressedBackButton(sender: AnyObject) {

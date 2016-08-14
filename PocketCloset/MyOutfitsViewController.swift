@@ -1,14 +1,14 @@
 //
-//  SettingsViewController.swift
+//  MyOutfitsViewController.swift
 //  PocketCloset
 //
-//  Created by Amy Kremer on 8/13/16.
+//  Created by Amy Kremer on 8/14/16.
 //  Copyright © 2016 Rose-Hulman. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class MyOutfitsViewController: UIViewController {
     
     let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
 
@@ -23,7 +23,7 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pressedBackButton(sender: AnyObject) {
+    @IBAction func pressedMainMenu(sender: AnyObject) {
         performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
     }
 

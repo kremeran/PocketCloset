@@ -1,21 +1,25 @@
 //
-//  SettingsViewController.swift
+//  SocialViewController.swift
 //  PocketCloset
 //
-//  Created by Amy Kremer on 8/13/16.
+//  Created by Amy Kremer on 8/14/16.
 //  Copyright © 2016 Rose-Hulman. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class SocialViewController: UIViewController {
     
-    let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
+    let showMainMenuSegueIdentifier =
+        "mainMenuSegueIdentifier"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func pressedMainMenu(sender: AnyObject) {
+        performSegueWithIdentifier(showMainMenuSegueIdentifier, sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,9 +27,6 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func pressedBackButton(sender: AnyObject) {
-        performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
-    }
 
     /*
     // MARK: - Navigation
