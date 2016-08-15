@@ -18,6 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let showLoginScreen = FIRAuth.auth()?.currentUser == nil
+        if showLoginScreen {
+            showLoginViewController();
+        } else {
+            showMainMenuViewController()
+        }
+        window?.makeKeyAndVisible()
+        
+       
+//        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+//        GIDSignIn.sharedInstance().delegate = self
+
         return true
     }
 
@@ -58,6 +73,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         return coordinator
     }()
+    
+    
+    func handleLogin() {
+        showMainMenuViewController()
+    }
+    
+    func handleLogout() {
+        //GIDSignIn.sharedInstance().signOut()
+        try!FIRAuth.auth()?.signOut()
+        showLoginViewController()
+    }
+    
+    func showLoginViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window!.rootViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+        print("Showing Login View Controller")
+    }
+    
+    func showMainMenuViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let photoBucketTableViewController = storyboard.instantiateViewControllerWithIdentifier("MainMenuViewController")
+        self.window?.rootViewController = photoBucketTableViewController
+        
+    }
+//    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+//                withError error: NSError!) {
+//        if let error = error {
+//            print(error.localizedDescription)
+//            return
+//        }
+//        
+//        let authentication = user.authentication
+//        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
+//                                                                     accessToken: authentication.accessToken)
+//        FIRAuth.auth()?.signInWithCredential(credential, completion: { (user: FIRUser?, error: NSError?) in
+//            if error != nil{
+//                print("Error with google Auth")
+//                print(error?.localizedDescription)
+//                return
+//            }
+//            self.handleLogin()
+//        })
+//        print("Signed in through GOOGLE")
+//        // ...
+//    }
+
+    
 
 }
+
+extension UIViewController {
+        var appDelegate : AppDelegate {
+            get {
+                return UIApplication.sharedApplication().delegate as! AppDelegate
+            }
+        }
+    }
+    
+
+
+
 

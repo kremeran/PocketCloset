@@ -11,6 +11,8 @@ import UIKit
 class SettingsViewController: UITableViewController {
     
     let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
+    var sections: [Section] = SectionsData().getSectionsFromData()
+    let sectionCell = "sectionCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +20,67 @@ class SettingsViewController: UITableViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
     
     @IBAction func pressedBackButton(sender: AnyObject) {
         performSegueWithIdentifier(mainMenuSegueIdentifier, sender: self)
     }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return sections.count
+    }
+ 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //iterate through each item in sections array and call items property
+        return sections[section].items.count
+    }
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+         //iterate through each item in sections array and call heading property
+        
+        return sections[section].heading
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(sectionCell, forIndexPath: indexPath)
+        //config
+        //iterate through sections and then iterate through each of those items in our sections to label the rows
+        cell.textLabel!.text = sections[indexPath.section].items[indexPath.row]
+        
+        return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        if let cellID = cell?.textLabel?.text {
+            switch cellID {
+            case "Name":
+                print("Clicked Button1")
+            case "Birthday":
+                print("Clicked Button2")
+            case "Mobile Number":
+                print("Clicked Button2")
+            case "E-mail":
+                print("Clicked Button1")
+            case "Password":
+                print("Clicked Button1")
+            case "Notifications":
+                print("Clicked Button1")
+            case "Clear All Outfits":
+                print("Clicked Button1")
+            case "Clear All Data":
+                print("Clicked Button1")
+            case "LOG OUT":
+                self.appDelegate.handleLogout()
+            default:
+                print("Something wrong in cellID, please check")
+                break
+            }
+        }
+            // The values are hardcoded so we can switch with confidence
+    }        }
 
+    
+    
     /*
     // MARK: - Navigation
 
@@ -37,4 +91,4 @@ class SettingsViewController: UITableViewController {
     }
     */
 
-}
+

@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A6DC4891D5F38C100C36784 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */; };
+		0A6714831D62407D00DC08B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */; };
+		0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714841D62415E00DC08B4 /* LoginViewController.swift */; };
+		0A67148A1D6260EC00DC08B4 /* SecurityAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */; };
+		0A67148D1D6275A300DC08B4 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67148C1D6275A300DC08B4 /* Section.swift */; };
+		0A67148F1D62765300DC08B4 /* SectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67148E1D62765300DC08B4 /* SectionsData.swift */; };
 		C5A329480917BBBC07A2B138 /* Pods_PocketCloset.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */; };
 		CF70C6BF1D5FD79200D89CF6 /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6B81D5FD79200D89CF6 /* CameraIcon.png */; };
 		CF70C6C01D5FD79200D89CF6 /* ClosetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6B91D5FD79200D89CF6 /* ClosetButton.png */; };
@@ -33,7 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0A6714841D62415E00DC08B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAccount.swift; sourceTree = "<group>"; };
+		0A67148C1D6275A300DC08B4 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0A67148E1D62765300DC08B4 /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
 		5F9EFC174B2E5CC9BA6A777B /* Pods-PocketCloset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.debug.xcconfig"; sourceTree = "<group>"; };
 		66572DA4F2278BAE7C2FF436 /* Pods-PocketCloset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.release.xcconfig"; sourceTree = "<group>"; };
 		CF70C6B81D5FD79200D89CF6 /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CameraIcon.png; path = "PocketCloset/untitled folder/CameraIcon.png"; sourceTree = SOURCE_ROOT; };
@@ -73,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A6714861D62609C00DC08B4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		0A67148B1D62756900DC08B4 /* ViewController Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A67148C1D6275A300DC08B4 /* Section.swift */,
+				0A67148E1D62765300DC08B4 /* SectionsData.swift */,
+			);
+			name = "ViewController Helper Classes";
+			sourceTree = "<group>";
+		};
 		47742B9588DB28A678500527 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +152,8 @@
 		CFF1615F1D5B8C7D00C5744A /* PocketCloset */ = {
 			isa = PBXGroup;
 			children = (
+				0A67148B1D62756900DC08B4 /* ViewController Helper Classes */,
+				0A6714861D62609C00DC08B4 /* Objects */,
 				CFC1003F1D5E8E4200DC7A12 /* Image files */,
 				CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */,
 				CFC100291D5E8E1200DC7A12 /* Main.storyboard */,
@@ -135,13 +162,14 @@
 				CFC1002C1D5E8E1200DC7A12 /* Info.plist */,
 				CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */,
 				CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */,
-				0A6DC4881D5F38C100C36784 /* GoogleService-Info.plist */,
 				CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */,
 				CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */,
 				CFCEAFBB1D60DCBF00360F67 /* CameraViewController.swift */,
 				CFE6E5A11D61088400A8887C /* SocialViewController.swift */,
 				CFE6E5A31D610D8200A8887C /* NewOutfitViewController.swift */,
 				CFE6E5A51D61172C00A8887C /* MyOutfitsViewController.swift */,
+				0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */,
+				0A6714841D62415E00DC08B4 /* LoginViewController.swift */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -211,13 +239,13 @@
 				CF70C6C01D5FD79200D89CF6 /* ClosetButton.png in Resources */,
 				CFCEAFBA1D60D17200360F67 /* background.png in Resources */,
 				CF70C6BF1D5FD79200D89CF6 /* CameraIcon.png in Resources */,
-				0A6DC4891D5F38C100C36784 /* GoogleService-Info.plist in Resources */,
 				CF70C6C21D5FD79200D89CF6 /* MenuButton.png in Resources */,
 				CF70C6C31D5FD79200D89CF6 /* SettingsIcon.png in Resources */,
 				CF70C6C11D5FD79200D89CF6 /* MenuBanner.png in Resources */,
 				CFC100331D5E8E1200DC7A12 /* LaunchScreen.storyboard in Resources */,
 				CF70C6C41D5FD79200D89CF6 /* TitleBanner.png in Resources */,
 				CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */,
+				0A6714831D62407D00DC08B4 /* GoogleService-Info.plist in Resources */,
 				CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */,
 				CF70C6C51D5FD79200D89CF6 /* UserIcon.png in Resources */,
 			);
@@ -280,13 +308,17 @@
 			files = (
 				CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */,
 				CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */,
+				0A67148F1D62765300DC08B4 /* SectionsData.swift in Sources */,
 				CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */,
 				CF8604D21D6024D000E9F5CD /* SettingsViewController.swift in Sources */,
 				CFCEAFBC1D60DCBF00360F67 /* CameraViewController.swift in Sources */,
 				CFE6E5A61D61172C00A8887C /* MyOutfitsViewController.swift in Sources */,
 				CFE6E5A41D610D8200A8887C /* NewOutfitViewController.swift in Sources */,
 				CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */,
+				0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */,
+				0A67148D1D6275A300DC08B4 /* Section.swift in Sources */,
 				CFE6E5A21D61088400A8887C /* SocialViewController.swift in Sources */,
+				0A67148A1D6260EC00DC08B4 /* SecurityAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
