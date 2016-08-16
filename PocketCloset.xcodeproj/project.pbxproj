@@ -42,6 +42,7 @@
 		0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAccount.swift; sourceTree = "<group>"; };
 		0A67148C1D6275A300DC08B4 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		0A67148E1D62765300DC08B4 /* SectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsData.swift; sourceTree = "<group>"; };
+		0A6714921D62B18000DC08B4 /* PocketCloset-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PocketCloset-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F9EFC174B2E5CC9BA6A777B /* Pods-PocketCloset.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.debug.xcconfig"; sourceTree = "<group>"; };
 		66572DA4F2278BAE7C2FF436 /* Pods-PocketCloset.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketCloset.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketCloset/Pods-PocketCloset.release.xcconfig"; sourceTree = "<group>"; };
 		CF70C6B81D5FD79200D89CF6 /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CameraIcon.png; path = "PocketCloset/untitled folder/CameraIcon.png"; sourceTree = SOURCE_ROOT; };
@@ -170,6 +171,7 @@
 				CFE6E5A51D61172C00A8887C /* MyOutfitsViewController.swift */,
 				0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */,
 				0A6714841D62415E00DC08B4 /* LoginViewController.swift */,
+				0A6714921D62B18000DC08B4 /* PocketCloset-Bridging-Header.h */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -418,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rosehulman.kremeran.PocketCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PocketCloset/PocketCloset-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -432,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rosehulman.kremeran.PocketCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PocketCloset/PocketCloset-Bridging-Header.h";
 			};
 			name = Release;
 		};

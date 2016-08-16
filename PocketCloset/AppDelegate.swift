@@ -11,13 +11,22 @@ import Firebase
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
 
+    func application(application: UIApplication,
+                     openURL url: NSURL, options: [String: AnyObject]) -> Bool {
+        return GIDSignIn.sharedInstance().handleURL(url,
+                                                    sourceApplication: options[UIApplicationOpenURLOptionsSourceApplicationKey] as? String,
+                                                    annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
+    }
 
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         FIRApp.configure()
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
@@ -80,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func handleLogout() {
-        //GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance().signOut()
         try!FIRAuth.auth()?.signOut()
         showLoginViewController()
     }
@@ -97,27 +106,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         self.window?.rootViewController = photoBucketTableViewController
         
     }
-//    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-//                withError error: NSError!) {
-//        if let error = error {
-//            print(error.localizedDescription)
-//            return
-//        }
-//        
-//        let authentication = user.authentication
-//        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
-//                                                                     accessToken: authentication.accessToken)
-//        FIRAuth.auth()?.signInWithCredential(credential, completion: { (user: FIRUser?, error: NSError?) in
-//            if error != nil{
-//                print("Error with google Auth")
-//                print(error?.localizedDescription)
-//                return
-//            }
-//            self.handleLogin()
-//        })
-//        print("Signed in through GOOGLE")
-//        // ...
-//    }
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+                withError error: NSError!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        let authentication = user.authentication
+        let credential = FIRGoogleAuthProvider.credentialWithIDToken(authentication.idToken,
+                                                                     accessToken: authentication.accessToken)
+        FIRAuth.auth()?.signInWithCredential(credential, completion: { (user: FIRUser?, error: NSError?) in
+            if error != nil{
+                print("Error with google Auth")
+                print(error?.localizedDescription)
+                return
+            }
+            self.handleLogin()
+        })
+        print("Signed in through GOOGLE")
+        // ...
+    }
 
     
 

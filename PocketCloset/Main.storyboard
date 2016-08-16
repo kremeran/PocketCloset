@@ -740,47 +740,47 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-Py-D64">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHp-Py-D64" customClass="GIDSignInButton">
                                 <rect key="frame" x="251" y="419" width="97" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="rHp-Py-D64" secondAttribute="height" multiplier="40:11" id="5yX-BT-Isf"/>
                                     <constraint firstAttribute="height" constant="30" id="C3x-tc-KF1"/>
-                                    <constraint firstAttribute="width" secondItem="rHp-Py-D64" secondAttribute="height" multiplier="97:30" id="zbh-1n-qXw"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="zbh-1n-qXw"/>
+                                        <exclude reference="5yX-BT-Isf"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="zbh-1n-qXw"/>
+                                        <include reference="5yX-BT-Isf"/>
+                                        <exclude reference="C3x-tc-KF1"/>
                                     </mask>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rHp-Py-D64" firstAttribute="top" secondItem="e6g-mp-3cr" secondAttribute="bottom" constant="28" id="3TK-AP-PXg"/>
                             <constraint firstItem="e6g-mp-3cr" firstAttribute="top" secondItem="Bvz-bY-AR8" secondAttribute="bottom" constant="131" id="4Ya-H5-HXA">
                                 <variation key="heightClass=regular-widthClass=compact" constant="81"/>
                             </constraint>
-                            <constraint firstItem="rHp-Py-D64" firstAttribute="top" secondItem="Bvz-bY-AR8" secondAttribute="bottom" constant="526" id="6bk-Tg-Wwm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rHp-Py-D64" secondAttribute="trailing" constant="131" id="H0O-nQ-vYZ"/>
+                            <constraint firstItem="58u-Tg-iJi" firstAttribute="top" secondItem="rHp-Py-D64" secondAttribute="bottom" constant="187" id="D5z-Gt-3e5"/>
                             <constraint firstItem="e6g-mp-3cr" firstAttribute="leading" secondItem="4Uj-ni-spP" secondAttribute="leading" id="Hqj-j4-RA8">
                                 <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                             </constraint>
                             <constraint firstItem="hon-f8-jyH" firstAttribute="leading" secondItem="4Uj-ni-spP" secondAttribute="leading" id="SUg-Jl-jup"/>
                             <constraint firstItem="hon-f8-jyH" firstAttribute="top" secondItem="4Uj-ni-spP" secondAttribute="top" id="T4J-2D-d7L"/>
-                            <constraint firstItem="58u-Tg-iJi" firstAttribute="top" secondItem="rHp-Py-D64" secondAttribute="bottom" constant="224" id="UtI-Ix-2S2"/>
+                            <constraint firstItem="rHp-Py-D64" firstAttribute="centerX" secondItem="hon-f8-jyH" secondAttribute="centerX" id="YVg-Ic-bLf"/>
                             <constraint firstAttribute="trailing" secondItem="hon-f8-jyH" secondAttribute="trailing" id="ZC0-u9-whx"/>
-                            <constraint firstItem="rHp-Py-D64" firstAttribute="top" secondItem="e6g-mp-3cr" secondAttribute="bottom" constant="155" id="eW9-sq-kve">
-                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
-                            </constraint>
+                            <constraint firstItem="rHp-Py-D64" firstAttribute="leading" secondItem="4Uj-ni-spP" secondAttribute="leadingMargin" constant="103" id="ax4-YB-SeD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rHp-Py-D64" secondAttribute="trailing" constant="97" id="er8-Rc-9Ju"/>
                             <constraint firstAttribute="trailing" secondItem="e6g-mp-3cr" secondAttribute="trailing" id="jhd-dV-IPk">
                                 <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                             </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="rHp-Py-D64" secondAttribute="trailing" constant="52" id="juZ-ML-TZ3"/>
                             <constraint firstItem="58u-Tg-iJi" firstAttribute="top" secondItem="hon-f8-jyH" secondAttribute="bottom" id="lQn-LS-gCu"/>
-                            <constraint firstItem="rHp-Py-D64" firstAttribute="leading" secondItem="4Uj-ni-spP" secondAttribute="leadingMargin" constant="132" id="z7P-ED-o4F"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -788,14 +788,15 @@
                                 <exclude reference="rHp-Py-D64"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="UtI-Ix-2S2"/>
                                 <exclude reference="4Ya-H5-HXA"/>
                                 <exclude reference="Hqj-j4-RA8"/>
                                 <exclude reference="jhd-dV-IPk"/>
-                                <exclude reference="6bk-Tg-Wwm"/>
-                                <exclude reference="H0O-nQ-vYZ"/>
-                                <exclude reference="eW9-sq-kve"/>
-                                <exclude reference="z7P-ED-o4F"/>
+                                <exclude reference="3TK-AP-PXg"/>
+                                <exclude reference="YVg-Ic-bLf"/>
+                                <exclude reference="ax4-YB-SeD"/>
+                                <exclude reference="er8-Rc-9Ju"/>
+                                <exclude reference="juZ-ML-TZ3"/>
+                                <exclude reference="D5z-Gt-3e5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -804,14 +805,15 @@
                                 <include reference="rHp-Py-D64"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="UtI-Ix-2S2"/>
                                 <include reference="4Ya-H5-HXA"/>
                                 <include reference="Hqj-j4-RA8"/>
                                 <include reference="jhd-dV-IPk"/>
-                                <include reference="6bk-Tg-Wwm"/>
-                                <include reference="H0O-nQ-vYZ"/>
-                                <include reference="eW9-sq-kve"/>
-                                <include reference="z7P-ED-o4F"/>
+                                <include reference="3TK-AP-PXg"/>
+                                <include reference="YVg-Ic-bLf"/>
+                                <exclude reference="ax4-YB-SeD"/>
+                                <exclude reference="er8-Rc-9Ju"/>
+                                <include reference="juZ-ML-TZ3"/>
+                                <include reference="D5z-Gt-3e5"/>
                             </mask>
                         </variation>
                     </view>
@@ -819,7 +821,7 @@
                         <outlet property="emailPasswordCard" destination="e6g-mp-3cr" id="nQ8-zO-CAI"/>
                         <outlet property="emailPasswordCardContent" destination="Jb3-eM-xmj" id="uNw-25-KIg"/>
                         <outlet property="emailtextField" destination="q04-pa-M6S" id="kJG-0M-Pqu"/>
-                        <outlet property="googleButton" destination="rHp-Py-D64" id="N6P-v1-Ivy"/>
+                        <outlet property="googleSignIn" destination="rHp-Py-D64" id="1Xz-YX-McE"/>
                         <outlet property="passwordTextField" destination="ZTZ-bB-RKI" id="Ebf-Z3-Vgo"/>
                     </connections>
                 </viewController>

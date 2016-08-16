@@ -12,11 +12,11 @@ import Material
 
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var emailPasswordCard: CardView!
-   // @IBOutlet weak var googleSignIn: GIDSignInButton!
-    @IBOutlet weak var googleButton: UIView!
+    @IBOutlet weak var googleSignIn: GIDSignInButton!
+   // @IBOutlet weak var googleButton: UIView!
     @IBOutlet weak var passwordTextField: TextField!
     @IBOutlet weak var emailPasswordCardContent: UIView!
     @IBOutlet weak var emailtextField: TextField!
@@ -26,6 +26,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         //GIDSignIn.sharedInstance().uiDelegate = self
         //googleSignIn.style = .Wide
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+       googleSignIn.style = .Wide
         prepareView()
     }
     
