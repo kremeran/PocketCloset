@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
 
 class SettingsViewController: UITableViewController {
     
     let mainMenuSegueIdentifier = "mainMenuSegueIdentifier"
     var sections: [Section] = SectionsData().getSectionsFromData()
     let sectionCell = "sectionCell"
+    let firebaseRef = FIRDatabase.database().reference()
+    let currentUserUid = FIRAuth.auth()!.currentUser!.uid
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+       
         // Do any additional setup after loading the view.
     }
+    
 
   
     
@@ -54,15 +62,16 @@ class SettingsViewController: UITableViewController {
         if let cellID = cell?.textLabel?.text {
             switch cellID {
             case "Name":
-                print("Clicked Button1")
+                cell?.detailTextLabel?.text = FIRAuth.auth()!.currentUser?.displayName
             case "Birthday":
                 print("Clicked Button2")
             case "Mobile Number":
                 print("Clicked Button2")
             case "E-mail":
-                print("Clicked Button1")
+                let email = FIRAuth.auth()!.currentUser?.email
+                cell?.detailTextLabel?.text = email
             case "Password":
-                print("Clicked Button1")
+                print("implement this")
             case "Notifications":
                 print("Clicked Button1")
             case "Clear All Outfits":
@@ -75,9 +84,22 @@ class SettingsViewController: UITableViewController {
                 print("Something wrong in cellID, please check")
                 break
             }
+            tableView.reloadData()
         }
             // The values are hardcoded so we can switch with confidence
-    }        }
+    }
+    func updatePassword() {
+        
+        
+    }
+    
+    
+    
+    
+    
+
+}
+
 
     
     

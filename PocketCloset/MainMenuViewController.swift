@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainMenuViewController: UIViewController {
     let myClosetSegueIdentifier = "showMyCloset"
@@ -16,12 +17,19 @@ class MainMenuViewController: UIViewController {
     let socialSegueIdentifier = "socialSegueIdentifier"
     let newOutfitSegueIdentifier = "pressedNewOutfitIdentifier"
     
+    // var currentUserRef : FIRDatabaseReference!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        //currentUserRef.removeAllObservers()
+    }
+
  
     // will need to create 4 different segues to toggle through views
     // also a navigation controller will need to be embedded in so that we can go back to this menu
@@ -48,6 +56,16 @@ class MainMenuViewController: UIViewController {
         performSegueWithIdentifier(cameraSegueIdentifier, sender: self)
     }
     
+    
+//    
+//    func setUpFBObservers() {
+//        let firebaseRef = FIRDatabase.database().reference()
+//        let currentUserUid = FIRAuth.auth()!.currentUser!.uid
+//        currentUserRef = firebaseRef.child("users").child(currentUserUid)
+//        currentUserRef.observeEventType(.ChildAdded) { snapshot in self.passwordAdded(snapshot) }
+//        currentUserRef.observeEventType(.ChildChanged) { snapshot in self.passwordChanged(snapshot) }
+//        currentUserRef.observeEventType(.ChildRemoved) { snapshot in self.passwordRemoved(snapshot) }
+//    }
     
     /*
      @IBOutlet weak var MyHistoryPressed: UIButton!
