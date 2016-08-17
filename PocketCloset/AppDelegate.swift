@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import Firebase
-import CoreData
 import FirebaseAuth
+import CoreData
 
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate, GIDSignInDelegate {
