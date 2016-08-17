@@ -8,56 +8,101 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     let returnToMainMenuSegueIdentifier = "returnToMainMenu"
+    
+    @IBOutlet weak var imagePicked: UIImageView!
+    
+    var editedImage : UIImage?
+    @IBOutlet weak var cropView: UIImageView!
     
     @IBAction func pressedBack(sender: AnyObject) {
         performSegueWithIdentifier(returnToMainMenuSegueIdentifier, sender: self)
     }
     
-    @IBOutlet weak var cameraView: UIView!
-    let captureSession = AVCaptureSession()
-    var captureDevice : AVCaptureDevice?
+    @IBAction func pressedTakePhoto(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func pressedLibrary(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+            imagePicker.allowsEditing = false
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        imagePicked.image = image
+        editedImage = image
+        imagePicked.backgroundColor = UIColor.darkGrayColor()
+        self.dismissViewControllerAnimated(true, completion: nil);
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        captureSession.sessionPreset = AVCaptureSessionPresetPhoto
-        let devices = AVCaptureDevice.devices()
-        print(devices)
-        for device in devices {
-            print(device)
-            if (device.hasMediaType(AVMediaTypeVideo)) {
-                if(device.position == AVCaptureDevicePosition.Back) {
-                    captureDevice = device as? AVCaptureDevice
-                }
-            }
-        }
-        if captureDevice != nil {
-            beginSession()
-            print("began session\n\n\n\n")
-        } else {
-            print("error didnt begin session")
-        }
-        // Do any additional setup after loading the view.
+        
+    }
+    @IBAction func pressedScaleUp(sender: AnyObject) {
+    }
+    @IBAction func pressedScaleDown(sender: AnyObject) {
     }
     
-    func beginSession() {
-        do {
-            try self.captureSession.addInput(AVCaptureDeviceInput(device: self.captureDevice))
-        } catch {
+    @IBAction func pressedUsePhoto(sender: AnyObject) {
+        if editedImage != nil {
+            let storageRef = FIRStorage.storage().reference().child("unique title")
             
+            //  Every image stored in firebase must have a unique title. The way we will be accessing
+            //  it wont require us to store this title, we just need to store the URL. We
+            //  could randomly generate 20 digit strings to create random titles or potentially
+            //  a different way if you can think of it.
+            
+            if let uploadData = UIImageJPEGRepresentation(editedImage!, 0.5) {
+                storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                    if error != nil {
+                        print(error)
+                        return
+                    }
+                    //  URL of image that was just stored in firebase
+                    let photoURL = metadata?.downloadURLs![0]
+                })
+            }
         }
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        cameraView.layer.addSublayer(previewLayer)
-        previewLayer?.frame = cameraView.layer.frame
-        captureSession.startRunning()
     }
+    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        let translation = recognizer.translationInView(self.view)
+        if let view = recognizer.view {
+            view.center = CGPoint(x:view.center.x + translation.x,
+                                  y:view.center.y + translation.y)
+        }
+        recognizer.setTranslation(CGPointZero, inView: self.view)
+        print(cropView.frame.origin.x)
+    }
+    
+    @IBAction func handlePinch(recognizer : UIPinchGestureRecognizer) {
+        if let view = recognizer.view {
+            view.transform = CGAffineTransformScale(view.transform,
+                                                    recognizer.scale, recognizer.scale)
+            recognizer.scale = 1
+        }
+    }
+    
+    func gestureRecognizer(_: UIGestureRecognizer,
+        shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+        return true
     }
     
     

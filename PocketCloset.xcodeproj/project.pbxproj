@@ -22,11 +22,11 @@
 		CF70C6C51D5FD79200D89CF6 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */; };
 		CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */; };
 		CF8604D21D6024D000E9F5CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */; };
+		CF8D5F721D6435200027E9AF /* cropBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8D5F711D6435200027E9AF /* cropBorder.png */; };
 		CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */; };
 		CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC100291D5E8E1200DC7A12 /* Main.storyboard */; };
 		CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */; };
 		CFC100331D5E8E1200DC7A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002B1D5E8E1200DC7A12 /* LaunchScreen.storyboard */; };
-		CFC100341D5E8E1200DC7A12 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002C1D5E8E1200DC7A12 /* Info.plist */; };
 		CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */; };
 		CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */; };
 		CFCEAFBA1D60D17200360F67 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CFCEAFB91D60D17200360F67 /* background.png */; };
@@ -54,6 +54,7 @@
 		CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UserIcon.png; path = "PocketCloset/untitled folder/UserIcon.png"; sourceTree = SOURCE_ROOT; };
 		CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingViewController.swift; sourceTree = "<group>"; };
 		CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CF8D5F711D6435200027E9AF /* cropBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cropBorder.png; path = "PocketCloset/untitled folder/cropBorder.png"; sourceTree = SOURCE_ROOT; };
 		CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC100291D5E8E1200DC7A12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		CFC1003F1D5E8E4200DC7A12 /* Image files */ = {
 			isa = PBXGroup;
 			children = (
+				CF8D5F711D6435200027E9AF /* cropBorder.png */,
 				CF70C6B81D5FD79200D89CF6 /* CameraIcon.png */,
 				CF70C6B91D5FD79200D89CF6 /* ClosetButton.png */,
 				CF70C6BA1D5FD79200D89CF6 /* MenuBanner.png */,
@@ -211,6 +213,7 @@
 				TargetAttributes = {
 					CFF1615C1D5B8C7D00C5744A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2K96GCENN5;
 					};
 				};
 			};
@@ -237,7 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC100341D5E8E1200DC7A12 /* Info.plist in Resources */,
 				CF70C6C01D5FD79200D89CF6 /* ClosetButton.png in Resources */,
 				CFCEAFBA1D60D17200360F67 /* background.png in Resources */,
 				CF70C6BF1D5FD79200D89CF6 /* CameraIcon.png in Resources */,
@@ -247,6 +249,7 @@
 				CFC100331D5E8E1200DC7A12 /* LaunchScreen.storyboard in Resources */,
 				CF70C6C41D5FD79200D89CF6 /* TitleBanner.png in Resources */,
 				CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */,
+				CF8D5F721D6435200027E9AF /* cropBorder.png in Resources */,
 				0A6714831D62407D00DC08B4 /* GoogleService-Info.plist in Resources */,
 				CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */,
 				CF70C6C51D5FD79200D89CF6 /* UserIcon.png in Resources */,
@@ -364,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -416,10 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PocketCloset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rosehulman.kremeran.PocketCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketCloset/PocketCloset-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -431,10 +437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PocketCloset/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rosehulman.kremeran.PocketCloset;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PocketCloset/PocketCloset-Bridging-Header.h";
 			};
 			name = Release;

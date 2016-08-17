@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+
 
 class MainMenuViewController: UIViewController {
     let myClosetSegueIdentifier = "showMyCloset"
