@@ -9,18 +9,14 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import Material
 
 
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
 
-    @IBOutlet weak var emailPasswordCard: CardView!
     @IBOutlet weak var googleSignIn: GIDSignInButton!
-   // @IBOutlet weak var googleButton: UIView!
-    @IBOutlet weak var passwordTextField: TextField!
-    @IBOutlet weak var emailPasswordCardContent: UIView!
-    @IBOutlet weak var emailtextField: TextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailtextField: UITextField!
     
 
     override func viewDidLoad() {
@@ -37,7 +33,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
         
         // Email / Password
-        prepareEmailPasswordCard()
         
         
         
@@ -46,35 +41,14 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
     }
     
-    
-    func prepareEmailPasswordCard() {
-        emailPasswordCard.contentView = emailPasswordCardContent
-        
-        emailtextField.placeholder = "Email"
-        emailtextField.enableClearIconButton = true
-        emailtextField.placeholderActiveColor = MaterialColor.grey.darken2
-        
-        passwordTextField.placeholder = "Password"
-        passwordTextField.clearButtonMode = .WhileEditing
-        passwordTextField.enableVisibilityIconButton = true
-        passwordTextField.placeholderActiveColor = MaterialColor.grey.darken2
-        
-        let signUpBtn: FlatButton = FlatButton()
-        signUpBtn.pulseColor = MaterialColor.blue.lighten1
-        signUpBtn.setTitle("Sign up", forState: .Normal)
-        signUpBtn.setTitleColor(MaterialColor.blue.darken1, forState: .Normal)
-        signUpBtn.addTarget(self, action: #selector(LoginViewController.handleEmailPasswordSignUp),
-                            forControlEvents: .TouchUpInside)
-        emailPasswordCard.leftButtons = [signUpBtn]
-        
-        let loginBtn: FlatButton = FlatButton()
-        loginBtn.pulseColor = MaterialColor.blue.lighten1
-        loginBtn.setTitle("Login", forState: .Normal)
-        loginBtn.setTitleColor(MaterialColor.blue.darken1, forState: .Normal)
-        loginBtn.addTarget(self, action: #selector(LoginViewController.handleEmailPasswordLogin),
-                           forControlEvents: .TouchUpInside)
-        emailPasswordCard.rightButtons = [loginBtn]
+    @IBAction func pressedSignUp(sender: AnyObject) {
+        self.handleEmailPasswordSignUp()
     }
+    
+    @IBAction func pressedLogin(sender: AnyObject) {
+        self.handleEmailPasswordLogin()
+    }
+    
     
     // MARK: - Login Methods
     func loginCompletionCallback(user: FIRUser?, error: NSError?) {

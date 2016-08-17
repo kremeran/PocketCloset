@@ -9,7 +9,6 @@
 import UIKit
 import FirebaseAuth
 import CoreData
-
 import Firebase
 
 @UIApplicationMain
