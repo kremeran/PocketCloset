@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 
 class SettingsViewController: UITableViewController {
@@ -18,12 +17,11 @@ class SettingsViewController: UITableViewController {
     let sectionCell = "sectionCell"
     let firebaseRef = FIRDatabase.database().reference()
     let currentUserUid = FIRAuth.auth()!.currentUser!.uid
-    var currentUserRef : FIRDatabaseReference!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentUserRef = firebaseRef.child("users").child(currentUserUid).child("info")
+    
        
         // Do any additional setup after loading the view.
     }
@@ -72,7 +70,7 @@ class SettingsViewController: UITableViewController {
                 let email = FIRAuth.auth()!.currentUser?.email
                 cell?.detailTextLabel?.text = email
             case "Password":
-                updatePassword()
+                print("implement this")
             case "Notifications":
                 print("Clicked Button1")
             case "Clear All Outfits":
@@ -91,53 +89,7 @@ class SettingsViewController: UITableViewController {
     }
     func updatePassword() {
         
-        let createListDialog = UIAlertController(title: "Change Password " , message: nil, preferredStyle: UIAlertControllerStyle.Alert)
         
-      
-        createListDialog.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "Put in new password"
-        }
-        createListDialog.addTextFieldWithConfigurationHandler { (textField) in
-            textField.placeholder = "Re-Enter the new password"
-        }
-        let okAction = UIAlertAction(title: "Change", style: .Default) { (action) in
-            
-            
-            let newPass = createListDialog.textFields![0].text!
-            let renewPass = createListDialog.textFields![1].text!
-            
-            if newPass == renewPass {
-                FIRAuth.auth()?.currentUser?.updatePassword(newPass, completion: { (error: NSError?) in
-                    if((error) == nil){
-                        let passwordChanger = UIAlertController(title: "Password Changed " , message:"Successful", preferredStyle: UIAlertControllerStyle.Alert)
-                        
-                        self.presentViewController(passwordChanger, animated: true, completion: nil)
-                        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(4 * Double(NSEC_PER_SEC)))
-                        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                            passwordChanger.dismissViewControllerAnimated(true, completion: nil)
-                        })
-                        
-                    }
-                    else{
-                        let passwordChanger = UIAlertController(title: "Something went wrong " , message:"Try again", preferredStyle: UIAlertControllerStyle.Alert)
-                        
-                        self.presentViewController(passwordChanger, animated: true, completion: nil)
-                        let dispatchTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(4 * Double(NSEC_PER_SEC)))
-                        dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                            passwordChanger.dismissViewControllerAnimated(true, completion: nil)
-                        })
-
-                    }
-                    })
-                
-            }
-        }
-        
-    
-        let cancelAction = UIAlertAction(title: "Keep", style: .Default, handler: nil)
-        createListDialog.addAction(cancelAction)
-        createListDialog.addAction(okAction)
-        self.presentViewController(createListDialog, animated: true, completion: nil)
     }
     
     
