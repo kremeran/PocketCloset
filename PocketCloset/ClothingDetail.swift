@@ -17,7 +17,6 @@ class ClothingDetail: UIViewController {
     let myClosetSegueIdentifier = "showMyCloset"
     var myOutfit = [Article]()
     let customOutfitSegue = "customOutfit"
-    var outFitRef : FIRDatabaseReference!
 
     
     @IBOutlet weak var articleType: UILabel!
@@ -31,10 +30,7 @@ class ClothingDetail: UIViewController {
         let firebaseRef = FIRDatabase.database().reference()
         let curentUsersUid = FIRAuth.auth()!.currentUser!.uid
         currentUserRef = firebaseRef.child("users").child(curentUsersUid)
-//        articleRef = currentUserRef.child("articles")
-        outFitRef = currentUserRef.child("outfits")
-        
-//        
+        articleRef = currentUserRef.child("articles")
     }
 
     override func viewDidLoad() {
