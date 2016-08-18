@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class myClosetViewController: UIViewController {
     
     let returnToMainMenuSegueIdentifier = "returnToMainMenu"
     let showCategoryIdentifier = "showCategoryIdentifier"
+
+    var articlesRef : FIRDatabaseReference!
     
     var categoryTitle : String!
     
@@ -49,8 +52,9 @@ class myClosetViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == showCategoryIdentifier {
-            let controller = segue.destinationViewController as! ClothingViewController
+            let controller = segue.destinationViewController.childViewControllers[0] as! ClothingTableViewController
             controller.clothingTitle = categoryTitle
+            controller.articlesRef = self.articlesRef
         }
     }
     

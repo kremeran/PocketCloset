@@ -20,20 +20,22 @@
 		CF70C6C31D5FD79200D89CF6 /* SettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BC1D5FD79200D89CF6 /* SettingsIcon.png */; };
 		CF70C6C41D5FD79200D89CF6 /* TitleBanner.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BD1D5FD79200D89CF6 /* TitleBanner.png */; };
 		CF70C6C51D5FD79200D89CF6 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */; };
-		CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */; };
 		CF8604D21D6024D000E9F5CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */; };
 		CF8D5F721D6435200027E9AF /* cropBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8D5F711D6435200027E9AF /* cropBorder.png */; };
+		CFAF3D741D6533010060DBD8 /* ClothingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAF3D731D6533010060DBD8 /* ClothingDetail.swift */; };
 		CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */; };
 		CFC100311D5E8E1200DC7A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC100291D5E8E1200DC7A12 /* Main.storyboard */; };
 		CFC100321D5E8E1200DC7A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */; };
 		CFC100331D5E8E1200DC7A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC1002B1D5E8E1200DC7A12 /* LaunchScreen.storyboard */; };
 		CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */; };
 		CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */; };
+		CFC52D0F1D64F5E700517F17 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC52D0E1D64F5E700517F17 /* Article.swift */; };
 		CFCEAFBA1D60D17200360F67 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CFCEAFB91D60D17200360F67 /* background.png */; };
 		CFCEAFBC1D60DCBF00360F67 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCEAFBB1D60DCBF00360F67 /* CameraViewController.swift */; };
 		CFE6E5A21D61088400A8887C /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6E5A11D61088400A8887C /* SocialViewController.swift */; };
 		CFE6E5A41D610D8200A8887C /* NewOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6E5A31D610D8200A8887C /* NewOutfitViewController.swift */; };
 		CFE6E5A61D61172C00A8887C /* MyOutfitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE6E5A51D61172C00A8887C /* MyOutfitsViewController.swift */; };
+		CFF251B51D650B38008A6785 /* ClothingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF251B41D650B38008A6785 /* ClothingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +54,9 @@
 		CF70C6BC1D5FD79200D89CF6 /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsIcon.png; path = "PocketCloset/untitled folder/SettingsIcon.png"; sourceTree = SOURCE_ROOT; };
 		CF70C6BD1D5FD79200D89CF6 /* TitleBanner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TitleBanner.png; path = "PocketCloset/untitled folder/TitleBanner.png"; sourceTree = SOURCE_ROOT; };
 		CF70C6BE1D5FD79200D89CF6 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UserIcon.png; path = "PocketCloset/untitled folder/UserIcon.png"; sourceTree = SOURCE_ROOT; };
-		CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingViewController.swift; sourceTree = "<group>"; };
 		CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CF8D5F711D6435200027E9AF /* cropBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cropBorder.png; path = "PocketCloset/untitled folder/cropBorder.png"; sourceTree = SOURCE_ROOT; };
+		CFAF3D731D6533010060DBD8 /* ClothingDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingDetail.swift; sourceTree = "<group>"; };
 		CFC100281D5E8E1200DC7A12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC100291D5E8E1200DC7A12 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CFC1002A1D5E8E1200DC7A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,12 +64,14 @@
 		CFC1002C1D5E8E1200DC7A12 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myClosetViewController.swift; sourceTree = "<group>"; };
+		CFC52D0E1D64F5E700517F17 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		CFCEAFB91D60D17200360F67 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = "PocketCloset/untitled folder/background.png"; sourceTree = SOURCE_ROOT; };
 		CFCEAFBB1D60DCBF00360F67 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CFE6E5A11D61088400A8887C /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		CFE6E5A31D610D8200A8887C /* NewOutfitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOutfitViewController.swift; sourceTree = "<group>"; };
 		CFE6E5A51D61172C00A8887C /* MyOutfitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOutfitsViewController.swift; sourceTree = "<group>"; };
 		CFF1615D1D5B8C7D00C5744A /* PocketCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF251B41D650B38008A6785 /* ClothingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothingTableViewController.swift; sourceTree = "<group>"; };
 		EB49815508686E5768EF0C4E /* Pods_PocketCloset.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketCloset.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,7 +169,6 @@
 				CFC1002C1D5E8E1200DC7A12 /* Info.plist */,
 				CFC1002E1D5E8E1200DC7A12 /* MainMenuViewController.swift */,
 				CFC1002F1D5E8E1200DC7A12 /* myClosetViewController.swift */,
-				CF70C6C81D5FDEBE00D89CF6 /* ClothingViewController.swift */,
 				CF8604D11D6024D000E9F5CD /* SettingsViewController.swift */,
 				CFCEAFBB1D60DCBF00360F67 /* CameraViewController.swift */,
 				CFE6E5A11D61088400A8887C /* SocialViewController.swift */,
@@ -174,6 +177,9 @@
 				0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */,
 				0A6714841D62415E00DC08B4 /* LoginViewController.swift */,
 				0A6714921D62B18000DC08B4 /* PocketCloset-Bridging-Header.h */,
+				CFC52D0E1D64F5E700517F17 /* Article.swift */,
+				CFF251B41D650B38008A6785 /* ClothingTableViewController.swift */,
+				CFAF3D731D6533010060DBD8 /* ClothingDetail.swift */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -311,14 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC52D0F1D64F5E700517F17 /* Article.swift in Sources */,
 				CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */,
 				CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */,
 				0A67148F1D62765300DC08B4 /* SectionsData.swift in Sources */,
-				CF70C6C91D5FDEBE00D89CF6 /* ClothingViewController.swift in Sources */,
 				CF8604D21D6024D000E9F5CD /* SettingsViewController.swift in Sources */,
 				CFCEAFBC1D60DCBF00360F67 /* CameraViewController.swift in Sources */,
 				CFE6E5A61D61172C00A8887C /* MyOutfitsViewController.swift in Sources */,
 				CFE6E5A41D610D8200A8887C /* NewOutfitViewController.swift in Sources */,
+				CFAF3D741D6533010060DBD8 /* ClothingDetail.swift in Sources */,
+				CFF251B51D650B38008A6785 /* ClothingTableViewController.swift in Sources */,
 				CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */,
 				0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */,
 				0A67148D1D6275A300DC08B4 /* Section.swift in Sources */,

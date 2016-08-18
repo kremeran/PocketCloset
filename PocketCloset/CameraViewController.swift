@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import AVFoundation
 import Firebase
 
 class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     
     let returnToMainMenuSegueIdentifier = "returnToMainMenu"
+    var photoURL : String!
+    var articlesRef : FIRDatabaseReference!
     
     @IBOutlet weak var imagePicked: UIImageView!
     
@@ -20,6 +21,10 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var cropView: UIImageView!
     
     @IBAction func pressedBack(sender: AnyObject) {
+        returnToMainMenu()
+    }
+    
+    func returnToMainMenu() {
         performSegueWithIdentifier(returnToMainMenuSegueIdentifier, sender: self)
     }
     
@@ -61,23 +66,48 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     @IBAction func pressedUsePhoto(sender: AnyObject) {
         if editedImage != nil {
-            let storageRef = FIRStorage.storage().reference().child("unique title")
+            let storageRef = FIRStorage.storage().reference().child("\((FIRAuth.auth()?.currentUser?.email)!)/\(NSDate().description)")
+            
             
             //  Every image stored in firebase must have a unique title. The way we will be accessing
             //  it wont require us to store this title, we just need to store the URL. We
             //  could randomly generate 20 digit strings to create random titles or potentially
             //  a different way if you can think of it.
             
-            if let uploadData = UIImageJPEGRepresentation(editedImage!, 0.5) {
+            if let uploadData = UIImageJPEGRepresentation(editedImage!, 0.1) {
                 storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
                     if error != nil {
                         print(error)
                         return
                     }
                     //  URL of image that was just stored in firebase
-                    let photoURL = metadata?.downloadURLs![0]
+                    self.photoURL = metadata?.downloadURLs![0].absoluteString
                 })
             }
+            let createListDialog = UIAlertController(title: "Create a new photo entry" , message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            createListDialog.addTextFieldWithConfigurationHandler { (textField) in
+                textField.placeholder = "title"
+            }
+            createListDialog.addTextFieldWithConfigurationHandler { (textField) in
+                textField.placeholder = "brand"
+            }
+            let okAction = UIAlertAction(title: "Create", style: .Default) { (action) in
+                
+                let textTitle = createListDialog.textFields?.first?.text
+                
+                let newArticle = Article(imageURL: self.photoURL, title: textTitle!)
+                self.articlesRef.childByAutoId().setValue(newArticle.getSnapshotValue())
+                self.returnToMainMenu()
+                
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
+            createListDialog.addAction(cancelAction)
+            createListDialog.addAction(okAction)
+            self.presentViewController(createListDialog, animated: true) {
+                
+            }
+            
         }
     }
     

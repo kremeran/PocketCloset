@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 
 class MainMenuViewController: UIViewController {
@@ -19,11 +18,17 @@ class MainMenuViewController: UIViewController {
     let socialSegueIdentifier = "socialSegueIdentifier"
     let newOutfitSegueIdentifier = "pressedNewOutfitIdentifier"
     
+    var currentUserRef : FIRDatabaseReference!
+    var articlesRef : FIRDatabaseReference!
+    
+    var articles = [Article]()
+    
     // var currentUserRef : FIRDatabaseReference!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupFirebaseObservers()
 
         // Do any additional setup after loading the view.
     }
@@ -31,11 +36,13 @@ class MainMenuViewController: UIViewController {
         super.viewDidDisappear(animated)
         //currentUserRef.removeAllObservers()
     }
-
- 
-    // will need to create 4 different segues to toggle through views
-    // also a navigation controller will need to be embedded in so that we can go back to this menu
- //
+    
+    func setupFirebaseObservers() {
+        let firebaseRef = FIRDatabase.database().reference()
+        let curentUsersUid = FIRAuth.auth()!.currentUser!.uid
+        currentUserRef = firebaseRef.child("users").child(curentUsersUid)
+        articlesRef = currentUserRef.child("articles")
+    }
     
     
     @IBAction func pressedNewOutfit(sender: AnyObject) {
@@ -58,26 +65,16 @@ class MainMenuViewController: UIViewController {
         performSegueWithIdentifier(cameraSegueIdentifier, sender: self)
     }
     
-    
-//    
-//    func setUpFBObservers() {
-//        let firebaseRef = FIRDatabase.database().reference()
-//        let currentUserUid = FIRAuth.auth()!.currentUser!.uid
-//        currentUserRef = firebaseRef.child("users").child(currentUserUid)
-//        currentUserRef.observeEventType(.ChildAdded) { snapshot in self.passwordAdded(snapshot) }
-//        currentUserRef.observeEventType(.ChildChanged) { snapshot in self.passwordChanged(snapshot) }
-//        currentUserRef.observeEventType(.ChildRemoved) { snapshot in self.passwordRemoved(snapshot) }
-//    }
-    
-    /*
-     @IBOutlet weak var MyHistoryPressed: UIButton!
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == myClosetSegueIdentifier {
+            let controller = segue.destinationViewController as! myClosetViewController
+            controller.articlesRef = self.articlesRef
+        }
+        if segue.identifier == cameraSegueIdentifier {
+            let controller = segue.destinationViewController as! CameraViewController
+            controller.articlesRef = self.articlesRef
+        }
     }
-    */
+ 
 
 }
