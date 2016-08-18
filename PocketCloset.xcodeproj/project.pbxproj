@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A42C5D31D65F395009A1A20 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C5D21D65F395009A1A20 /* Outfit.swift */; };
+		0A42C5D51D660C3A009A1A20 /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C5D41D660C3A009A1A20 /* info.swift */; };
 		0A6714831D62407D00DC08B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */; };
 		0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714841D62415E00DC08B4 /* LoginViewController.swift */; };
 		0A67148A1D6260EC00DC08B4 /* SecurityAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0A42C5D21D65F395009A1A20 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
+		0A42C5D41D660C3A009A1A20 /* info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A6714841D62415E00DC08B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAccount.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				CFF251B41D650B38008A6785 /* ClothingTableViewController.swift */,
 				CFAF3D731D6533010060DBD8 /* ClothingDetail.swift */,
 				0A42C5D21D65F395009A1A20 /* Outfit.swift */,
+				0A42C5D41D660C3A009A1A20 /* info.swift */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				CFC100301D5E8E1200DC7A12 /* AppDelegate.swift in Sources */,
 				0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */,
 				0A67148D1D6275A300DC08B4 /* Section.swift in Sources */,
+				0A42C5D51D660C3A009A1A20 /* info.swift in Sources */,
 				CFE6E5A21D61088400A8887C /* SocialViewController.swift in Sources */,
 				0A67148A1D6260EC00DC08B4 /* SecurityAccount.swift in Sources */,
 			);
