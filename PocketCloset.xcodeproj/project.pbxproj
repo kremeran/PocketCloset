@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A42C5D31D65F395009A1A20 /* Outfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42C5D21D65F395009A1A20 /* Outfit.swift */; };
 		0A6714831D62407D00DC08B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */; };
 		0A6714851D62415E00DC08B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714841D62415E00DC08B4 /* LoginViewController.swift */; };
 		0A67148A1D6260EC00DC08B4 /* SecurityAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A42C5D21D65F395009A1A20 /* Outfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outfit.swift; sourceTree = "<group>"; };
 		0A6714821D62407D00DC08B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0A6714841D62415E00DC08B4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0A6714891D6260EC00DC08B4 /* SecurityAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityAccount.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				CFC52D0E1D64F5E700517F17 /* Article.swift */,
 				CFF251B41D650B38008A6785 /* ClothingTableViewController.swift */,
 				CFAF3D731D6533010060DBD8 /* ClothingDetail.swift */,
+				0A42C5D21D65F395009A1A20 /* Outfit.swift */,
 			);
 			path = PocketCloset;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				CFC52D0F1D64F5E700517F17 /* Article.swift in Sources */,
 				CFC100361D5E8E1200DC7A12 /* MainMenuViewController.swift in Sources */,
+				0A42C5D31D65F395009A1A20 /* Outfit.swift in Sources */,
 				CFC100371D5E8E1200DC7A12 /* myClosetViewController.swift in Sources */,
 				0A67148F1D62765300DC08B4 /* SectionsData.swift in Sources */,
 				CF8604D21D6024D000E9F5CD /* SettingsViewController.swift in Sources */,

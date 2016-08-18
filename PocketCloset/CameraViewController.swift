@@ -90,13 +90,14 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UIN
                 textField.placeholder = "title"
             }
             createListDialog.addTextFieldWithConfigurationHandler { (textField) in
-                textField.placeholder = "brand"
+                textField.placeholder = "Type"
             }
             let okAction = UIAlertAction(title: "Create", style: .Default) { (action) in
                 
                 let textTitle = createListDialog.textFields?.first?.text
+                let textType = createListDialog.textFields![1].text
                 
-                let newArticle = Article(imageURL: self.photoURL, title: textTitle!)
+                let newArticle = Article(imageURL: self.photoURL, title: textTitle!, type: textType!)
                 self.articlesRef.childByAutoId().setValue(newArticle.getSnapshotValue())
                 self.returnToMainMenu()
                 

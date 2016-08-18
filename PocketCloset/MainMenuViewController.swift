@@ -74,6 +74,11 @@ class MainMenuViewController: UIViewController {
             let controller = segue.destinationViewController as! CameraViewController
             controller.articlesRef = self.articlesRef
         }
+        if segue.identifier == newOutfitSegueIdentifier {
+            let controller = segue.destinationViewController as! NewOutfitViewController
+            controller.currentUserArticlesRef = self.articlesRef// get to the uid below are articles
+        }
+
     }
  
 

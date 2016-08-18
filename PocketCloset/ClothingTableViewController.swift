@@ -33,7 +33,10 @@ class ClothingTableViewController: UITableViewController {
     
     func photoAdded(data : FIRDataSnapshot) {
         let article = Article(snapshot: data)
-        articles.insert(article, atIndex: 0)
+        if clothingTitle == article.type {
+            articles.insert(article, atIndex: 0)
+        }
+        
         tableView.reloadData()
     }
     
@@ -62,6 +65,7 @@ class ClothingTableViewController: UITableViewController {
             if article.key == modifiedArticle.key {
                 article.imageURL = modifiedArticle.imageURL
                 article.title = modifiedArticle.title
+                article.type = modifiedArticle.type
                 article.key = modifiedArticle.key
                 break
             }
@@ -142,6 +146,7 @@ class ClothingTableViewController: UITableViewController {
                 let object = articles[indexPath.row]
                 let controller = segue.destinationViewController as! ClothingDetail
                 controller.articleRef = self.articlesRef.child(object.key!)
+                controller.currentUserRef = self.articlesRef
             }
         }
     }
